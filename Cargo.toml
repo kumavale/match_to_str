@@ -2,6 +2,11 @@
 name = "match_to_str"
 version = "0.1.0"
 edition = "2021"
+authors = ["kumavale"]
+description = "match pattern to str"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/kumavale/match_to_str"
+categories = ["macro"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
