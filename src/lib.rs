@@ -1,3 +1,25 @@
+//! # match_to_str
+//!
+//! Converts the pattern part of the `match` expression into a `&'static str`.  
+//! It is mainly intended to be used when you want to convert a variable name into a string as is.
+//!
+//! ```rust
+//! use match_to_str::match_to_str;
+//!
+//! const CAT: u8 = 1;
+//! const DOG: u8 = 2;
+//!
+//! fn main() {
+//!     let animal = match_to_str!(1 => {
+//!         CAT,
+//!         DOG,
+//!         _,
+//!     });
+//!     assert_eq!(animal, "CAT");
+//! }
+//! ```
+
+/// Converts the pattern part of the `match` expression into a `&'static str`.
 #[macro_export]
 macro_rules! match_to_str {
     { $x:expr => { $($val:pat),+ $(,)? } } => {
